@@ -11,6 +11,17 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function () 
+{
     return view('welcome');
+});
+
+Route::get('/example', function () 
+{ 
+    return view('abc');
+});
+
+Route::get('/book/{id}', function ($id)
+{
+    return 'You have requested book #' . $id;
 });
